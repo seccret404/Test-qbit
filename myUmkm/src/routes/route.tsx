@@ -61,10 +61,10 @@ const BottomTabNavigator: React.FC = () => {
 const AppNavigator: React.FC = () => {
      return (
           <NavigationContainer>
-               <Stack.Navigator screenOptions={{ headerShown: false }}>
-                    <Stack.Screen name="Main" component={BottomTabNavigator} />
-                    <Stack.Screen name="Detail" component={DetailPage} />
-                    <Stack.Screen name="Search" component={SearchPage} />
+               <Stack.Navigator >
+                    <Stack.Screen name="Main" component={BottomTabNavigator} options={{headerShown:false}}/>
+                    <Stack.Screen name="Detail" component={DetailPage} options={{headerShown:true}}/>
+                    <Stack.Screen name="Search" component={SearchPage} options={{headerShown:false}}/>
                </Stack.Navigator>
           </NavigationContainer>
      );

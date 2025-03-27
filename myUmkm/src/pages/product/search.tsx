@@ -1,10 +1,15 @@
 import React, { useEffect, useRef } from 'react';
-import { Image, TextInput, View, StyleSheet } from 'react-native';
+import { Image, TextInput, View, StyleSheet, TouchableOpacity } from 'react-native';
+import Left from '../../../assets/left.png';
 import Mess from '../../../assets/mess.png';
-import User from '../../../assets/user.png';
+import { useNavigation } from '@react-navigation/native';
 
 export default function SearchPage() {
      const inputRef = useRef<TextInput>(null);
+     const navigation = useNavigation();
+     const toBack = () => {
+          navigation.navigate("Main")
+     }
 
      useEffect(() => {
           if (inputRef.current) {
@@ -15,9 +20,9 @@ export default function SearchPage() {
      return (
           <View style={styles.body}>
                <View style={styles.cTop}>
-                    <View>
-                         <Image source={User} />
-                    </View>
+                    <TouchableOpacity onPress={toBack}>
+                         <Image source={Left} width={40}/>
+                    </TouchableOpacity>
                     <View>
                          <TextInput
                               ref={inputRef}
@@ -26,7 +31,7 @@ export default function SearchPage() {
                          />
                     </View>
                     <View>
-                         <Image source={Mess} />
+                    <Image source={Mess} width={40}/>
                     </View>
                </View>
           </View>
