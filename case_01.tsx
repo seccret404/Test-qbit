@@ -35,9 +35,8 @@ type IFruit = {
    };
    console.log("3. Total stock per wadah:", totalStock);
    
-   // 4. Komentar terkait kasus
-  //  console.log("4. Komentar terkait kasus:");
-  //  console.log("- Ada variasi penulisan nama buah ('Apel' vs 'apel' vs 'KURMA'), sebaiknya distandarisasi.");
-  //  console.log("- Terdapat duplikasi `fruitId` (contoh: fruitId 5 muncul beberapa kali), sebaiknya diperbaiki.");
-  //  console.log("- Gunakan format `fruitName.toLowerCase()` untuk menghindari perbedaan kapitalisasi.");
+   //komentar
+  //  console.log("- Ada variasi penulisan nama buah ('Apel' vs 'apel' vs 'KURMA'), sebaiknya disamakan.");
+  //  console.log("- Terdapat duplikasi `fruitId` (contoh: fruitId 5 muncul beberapa kali).");
+
    
